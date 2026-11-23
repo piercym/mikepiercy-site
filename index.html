@@ -1119,6 +1119,31 @@ nav {
     gtag('config', 'G-RYCPYMZDB6');
   </script>
 
+<style>
+/* Flodesk "Playmaker Brief" inline form (form 6b047949c22e9b48bb5bc5ad), styled to match the site */
+.fd-brief [class*="__container"], .fd-brief [class^="ff-"] { background: transparent !important; }
+.fd-brief [class*="__container"] { padding: 0 !important; max-width: none !important; width: 100% !important; margin: 0 !important; }
+.fd-brief [class*="__form"] { padding: 0 !important; margin: 0 !important; max-width: none !important; }
+.fd-brief [class*="__title"], .fd-brief [class*="__subtitle"] { display: none !important; }
+.fd-brief [class*="__content"] { display: flex !important; flex-wrap: nowrap !important; gap: 0 !important; margin: 0 !important; padding: 0 !important; align-items: stretch !important; width: 100% !important; }
+.fd-brief [class*="__fields"] { flex: 1 1 auto !important; display: flex !important; margin: 0 !important; padding: 0 !important; min-width: 0 !important; }
+.fd-brief [class*="__field"] { flex: 1 1 auto !important; margin: 0 !important; padding: 0 !important; width: 100% !important; max-width: none !important; }
+.fd-brief .fd-form-control { width: 100% !important; height: 100% !important; min-height: 52px !important; box-sizing: border-box !important; border: 2px solid rgba(255,255,255,0.2) !important; border-right: none !important; border-radius: 0 !important; padding: 16px 20px !important; font-family: 'Barlow', sans-serif !important; font-size: 14px !important; color: var(--white) !important; background: rgba(255,255,255,0.06) !important; box-shadow: none !important; }
+.fd-brief .fd-form-control:focus { border-color: var(--red) !important; }
+.fd-brief .fd-form-label { font-family: 'Barlow', sans-serif !important; font-size: 14px !important; color: rgba(255,255,255,0.35) !important; padding-left: 20px !important; }
+.fd-brief [class*="__footer"] { flex: 0 0 auto !important; margin: 0 !important; padding: 0 !important; display: flex !important; }
+.fd-brief .fd-btn { height: 100% !important; min-height: 52px !important; margin: 0 !important; border: none !important; border-radius: 0 !important; background: var(--red) !important; color: var(--white) !important; padding: 16px 28px !important; font-family: 'Barlow', sans-serif !important; font-size: 11px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase !important; white-space: nowrap !important; cursor: pointer !important; }
+.fd-brief .fd-btn:hover { background: var(--red-dark) !important; }
+.fd-brief [class*="__success"], .fd-brief [class*="__error"] { color: var(--white) !important; text-align: left !important; padding: 12px 0 0 !important; margin: 0 !important; }
+.fd-brief [class*="__success"] *, .fd-brief [class*="__error"] * { color: var(--white) !important; font-family: 'Barlow', sans-serif !important; font-size: 14px !important; text-align: left !important; }
+.fd-brief--on-red .fd-form-control { border-color: rgba(255,255,255,0.3) !important; }
+.fd-brief--on-red .fd-btn { background: var(--black) !important; }
+.fd-brief--on-red .fd-btn:hover { background: var(--black-3) !important; }
+.fd-brief--compact .fd-form-control { min-height: 42px !important; padding: 12px 16px !important; font-size: 13px !important; }
+.fd-brief--compact .fd-form-label { font-size: 13px !important; padding-left: 16px !important; }
+.fd-brief--compact .fd-btn { min-height: 42px !important; padding: 12px 16px !important; font-size: 10px !important; }
+@media (max-width: 480px) { .fd-brief:not(.fd-brief--compact) [class*="__content"] { flex-wrap: wrap !important; } .fd-brief:not(.fd-brief--compact) .fd-form-control { border-right: 2px solid rgba(255,255,255,0.2) !important; } .fd-brief:not(.fd-brief--compact) [class*="__footer"], .fd-brief:not(.fd-brief--compact) .fd-btn { width: 100% !important; } }
+</style>
 </head>
 <body>
 
@@ -1181,11 +1206,7 @@ nav {
         The tools that separate athletes from everyone else — delivered every week to 3,500+ coaches and athletes.
       </p>
       <div class="home-hero-form">
-        <form action="https://form.flodesk.com/forms/6851db2131a842669c027cc3/submit" method="post" style="display:flex;gap:8px;flex-wrap:wrap">
-          <input name="email" type="email" placeholder="Enter your email address" required class="form-input-dark" style="flex:1;min-width:200px">
-          <input type="text" name="confirm_email_address" style="display:none">
-          <button type="submit" class="btn-red">Get the Brief</button>
-        </form>
+        <div class="fd-brief" id="fd-brief-hero"></div>
       </div>
       <p class="home-hero-note">Free weekly newsletter · Unsubscribe anytime</p>
     </div>
@@ -1279,11 +1300,7 @@ nav {
         <div class="home-newsletter-incentive">
           🎁 Free when you subscribe: <strong>The Playmaker's Playbook</strong> — 5 Principles That Separate Good Athletes From Great Ones
         </div>
-        <form action="https://form.flodesk.com/forms/6851db2131a842669c027cc3/submit" method="post" class="form-row home-newsletter-form">
-          <input name="email" type="email" placeholder="Your email address" required class="form-input-dark" style="border-color:rgba(255,255,255,0.3);flex:1">
-          <input type="text" name="confirm_email_address" style="display:none">
-          <button type="submit" class="btn-black">Get the Brief</button>
-        </form>
+        <div class="fd-brief fd-brief--on-red" id="fd-brief-newsletter"></div>
         <p class="home-newsletter-note">Free. Weekly. Unsubscribe anytime.</p>
       </div>
       <div class="home-newsletter-right">
@@ -2483,11 +2500,7 @@ nav {
     <div>
       <span class="footer-brand-logo" onclick="showPage('home')" style="cursor:pointer">MICHAEL<span style="color:var(--red)">.</span>PIERCY</span>PIERCY</span></span>
       <p class="footer-brand-tag">Former pro athlete. 34-year coaching veteran. Building athletes and businesses that last.</p>
-      <form action="https://form.flodesk.com/forms/6851db2131a842669c027cc3/submit" method="post" class="form-row" style="max-width:280px">
-        <input name="email" type="email" placeholder="Get the Playmaker Brief" required class="form-input-dark" style="font-size:13px;padding:12px 16px;flex:1">
-        <input type="text" name="confirm_email_address" style="display:none">
-        <button type="submit" class="btn-red" style="padding:12px 16px;font-size:10px">Join</button>
-      </form>
+      <div class="fd-brief fd-brief--compact" id="fd-brief-footer" style="max-width:280px"></div>
     </div>
     <div>
       <div class="footer-col-head">Work With Me</div>
@@ -2572,6 +2585,21 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+</script>
+<!-- Flodesk: Playmaker Brief signup (adds to Fitness professionals segment) -->
+<script>
+  (function(w, d, t, h, s, n) {
+    w.FlodeskObject = n;
+    var fn = function() { (w[n].q = w[n].q || []).push(arguments); };
+    w[n] = w[n] || fn;
+    var f = d.getElementsByTagName(t)[0];
+    var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+    var sm = d.createElement(t); sm.async = true; sm.type = 'module'; sm.src = h + s + '.mjs' + v; f.parentNode.insertBefore(sm, f);
+    var sn = d.createElement(t); sn.async = true; sn.noModule = true; sn.src = h + s + '.js' + v; f.parentNode.insertBefore(sn, f);
+  })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+  ['#fd-brief-hero', '#fd-brief-newsletter', '#fd-brief-footer'].forEach(function(sel) {
+    window.fd('form', { formId: '6b047949c22e9b48bb5bc5ad', containerEl: sel });
+  });
 </script>
 </body>
 </html>
